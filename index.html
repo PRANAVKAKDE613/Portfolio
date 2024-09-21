@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Moderustic:wght@300..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link
+    href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+    rel="stylesheet"/>
+    <script
+    src="https://code.jquery.com/jquery-3.4.1.js"
+    integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+    <script>
+    function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/GQbTQ3426q1TvvPT/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+            console.log("the form is submitted")
+            alert("Form Data Submitted :)")
+        },
+        error: function(){
+            console.log("not submitted")
+            alert("There was an error :(")
+        }
+    });
+    }
+    </script>
+</head>
+<body>
+    <nav>
+        <div class="personal-info">
+            <h1>Pranav Kakde</h1>
+            <p>Web Developer | Machine Learning</p>
+        </div>
+        <ul>
+            <li id="default">Home</li>
+            <li>About me</li>
+            <li>Certificates</li>
+            <li>Projects</li>
+        </ul>
+    </nav>
+    <main>
+        <div class="detail-info">
+            <h1>Hi, I am Pranav</h1>
+            <p>Bringing creativity and precision together to craft solutions that leave a lasting impact.</p>
+            <p>Connect with me on Social Media</p>
+            <i class="ri-instagram-fill"></i>
+            <i class="ri-github-fill"></i>
+            <i class="ri-linkedin-box-fill"></i>
+        </div>
+        <img src="pk2.jpg" alt="this is my photo">
+    </main>
+    <div class="gap"></div>
+    <div id="about">
+        <div class="heading"><h1>About me :</h1></div>
+        <p class="sub-heading">Hi There..! I’m a Pranav Kakde, driven by creativity and innovation, with a passion for transforming ideas into impactful results. My work blends technical expertise with artistic vision, tailored to solve real-world challenges. From concept to completion, I thrive on collaboration and pushing the boundaries of what’s possible.
+
+            Explore my portfolio to see projects that showcase my journey—where every detail is crafted with precision, and every solution is designed with purpose. Let’s connect and create something extraordinary together.</p>
+        <div class="container">
+            <div class="box">
+                <h1>Education</h1>
+                <p><strong>B.E is Information Technology Engineering</strong></p>
+                <p>From PCET'S PCCOER</p>
+                <p>8.7 2026</p><br>
+                <hr><br>
+                <p><strong>HSC</strong></p>
+                <p>The Jain International School Aurangabad</p>
+                <p>86.54%  2021</p><br><hr><br>
+                <p><strong>SSC</strong></p>
+                <p>Oyester English High School, Aurangabad</p>
+                <p>93%  2019</p>
+            </div>      
+            <div class="box">
+                <h1>Skills</h1>
+                <p><strong>Languages</strong></p>
+                <p>C, C++, Python, HTML, CSS, Javascript</p><br>
+                <p><strong>Python Libraries</strong></p>
+                <p>Numpy, Pandas, Matplotlib</p><br>
+                <p><strong>Database</strong></p>
+                <p>Sql</p>
+            </div>
+        </div>
+    </div>
+    <div class="gap"></div>
+    <section id="Projects">
+        <h1 class="projects-heading">My Projects</h1>
+        <div class="container">
+            <div class="boxx">
+                <img src="1718785862-severe-heat-wave-continues-in-uttar-pradesh-know-the-weather-of-your-city-aaj-ka-mausam.jpg" alt="">
+                <h1>Weather Website</h1>
+                <p>Developed a dynamic weather website using OpenWeatherMap API to provide real-time weather updates and additional information for any city.</p>
+                <div class="buttons">
+                    <button>View Live</button>
+                    <button>Github Repo</button>
+                </div>
+            </div>
+            <div class="boxx">
+                <img src="mykenzie-johnson-4qjxCUOc3iQ-unsplash.jpg" alt="">
+                <h1>Diabetes Predictor</h1>
+                <p>Designed and implemented a machine learning system to predict the likelihood of diabetes in patients based on specific input features (e.g., age, BMI, blood pressure, glucose levels).</p>
+                <div class="buttons">
+                    <button>View Live</button>
+                    <button>Github Repo</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <div class="gap"></div>
+    <div class="contact">
+        <div class="about-me">
+            <h1>Contact me</h1>
+            <div class="row">
+                <i class="ri-mail-fill"></i>
+                <p>kakdepranav993@gmail.com</p>
+            </div>
+            <div class="row">
+                <i class="ri-contacts-book-fill"></i>
+                <p>7447332450</p>
+            </div>
+            <div class="icons">
+                <i class="ri-linkedin-box-fill"></i>
+                <i class="ri-twitter-x-fill"></i>
+                <i class="ri-instagram-fill"></i>
+                <i class="ri-github-fill"></i>
+            </div>
+            <a href="Resume (1).pdf" download class="buttons">Download CV</a>
+        </div>
+        <div class="input-fields">
+            <h1>Let's make magic together</h1>
+            <form id="myForm">
+                <br/>
+                <input name="Name" placeholder="Name:"/>
+                <br/>
+                <input name="Email" placeholder="Email:"/>
+                <br/>
+                <textarea name="Message" placeholder="Message:">
+                </textarea>
+                <br/>
+              </form>
+              <button onclick="SubForm()">Connect</button>
+        </div>
+    </div>
+</body>
+</html>
